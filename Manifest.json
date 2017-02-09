@@ -1,0 +1,12 @@
+{
+  "package": "com.ichigoichie",
+  "manifestVersion": 1,
+  "name": "Wow! you too",
+  "shortName": "Wow! you too",
+  "author": {
+    "name": "Hitoshi Yabusaki"
+  },
+  "version": 1,
+  "versionName": "1.0.0",
+  "description": "Speaks the latest tweet in your feed."
+}
