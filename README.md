@@ -14,3 +14,8 @@ Use API
 - stopSegment [da]
 - getInstance [da.SpeechSynthesis]
 - speak [da.SpeechSynthesis]
+
+Question
+-------------
+- What unit for radius of geo trigger?
+- What is the difference between geofence and geo in state?

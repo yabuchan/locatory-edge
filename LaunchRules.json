@@ -3,8 +3,73 @@
     {
       "domain": "CUSTOMAPP",
       "name": [
-        "sample hello"
+        "Here we are",
+        "Here I am",
+        "I'm comming",
+        "emosound",
+        "soundscape"
       ]
+    }
+  ],
+  "rules": [
+    {
+      "comment": "Geo NY: trigger when enter/exit to/from NY",
+      "argumentObject": {
+        "cueVoice": "onlocation",
+        "cueVoiceArgs": ["at", "new york"],
+        "args": {"type": "location"}
+      },
+      "trigger": {
+        "geofence": [
+          {
+            "geo": {
+              "latitude": 40.758952,
+              "longitude": -73.984798,
+              "radius": 31560
+            },
+            "enterExit": ["ENTER", "EXIT"]
+          }
+        ]
+      },
+      "state": {
+        "activity": ["WALKING", "RUNNING", "GETTING_ON_VEHICLE", "RIDING_BICYCLE"]
+      }
+    },
+    {
+      "comment": "Timer: every 15 minutes trigger / State: Activity is RUNNING or WALKING, and the interval is 10",
+      "argumentObject": {
+        "cueVoice": "ontimer",
+        "cueVoiceArgs": [],
+        "args": {"type": "timer"}
+      },
+      "trigger": {
+        "repeat": [10]
+      },
+      "state": {
+        "intervalFromPrevious": [10]
+      }
+    },
+    {
+      "comment": "Home or Office: trigger when to go out from or be in home",
+      "argumentObject": {
+        "cueVoice": "onlocation",
+        "cueVoiceArgs": ["at", "home"],
+        "args": {"type": "location"}
+      },
+      "trigger": {
+        "placeEvent": ["HOME_ENTER", "HOME_EXIT", "OFFICE_ENTER", "OFFICE_EXIT"]
+      }
+    },
+    {
+      "comment": "Commute: trigger while to go to/from office",
+      "argumentObject": {
+        "cueVoice": "oncommute",
+        "cueVoiceArgs": ["on the way to" "work"],
+        "args": {"type": "commute"}
+      },
+      "trigger": {
+        "transportationEvent": ["GOING_TO_WORK", "LEAVING_WORK"]
+      }
     }
   ]
 }

@@ -1,12 +1,16 @@
 {
-  "package": "com.ichigoichie",
+  "package": "here-we-are",
   "manifestVersion": 1,
-  "name": "Wow! you too",
-  "shortName": "Wow! you too",
-  "author": {
-    "name": "Hitoshi Yabusaki"
-  },
   "version": 1,
   "versionName": "1.0.0",
-  "description": "Speaks the latest tweet in your feed."
+  "name": "Here We Are",
+  "author": {
+    "name": "Hitoshi Yabusaki",
+    "name": "Hiroshi Nakagoe",
+  },
+  "description": "Say \"Here we are.\" You're getting to like this city more.",
+  "offlineEnabled": false,
+  "background": {
+    "pollingInterval": 300
+  }
 }

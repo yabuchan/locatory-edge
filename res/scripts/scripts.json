@@ -1,6 +1,9 @@
 {
   "segmentStart": {
-    "common": "start segment"
+    "common": "start segment",
+    "ontimer": "start segment",
+    "onlocation": "start segment ${ARG0} ${ARG1}",
+    "oncommute": "start segment ${ARG0} ${ARG1}"
   },
   "segmentEnd": {
     "common": "stop segment"

@@ -1,0 +1,8 @@
+{
+  "noSupported": [
+    "The Function is not supported in this segment."
+  ],
+  "startscape": [
+    "we have ${length} soundscape. Let me start the first one."
+  ]
+}
