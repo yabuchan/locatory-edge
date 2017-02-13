@@ -1,12 +1,11 @@
-Sample Hello Segment
+SoundSpice
 =======================
 
-This segment provides a minimal segment, which speaks "Hello World!".
+SoundSpice makes your life more exciting by SOUNDS OF PAST BRILLIANT EVENTS that were held where you are.
 
 Features
 -------------
-- Launch by voice trigger
-- Speak "Hello World!"
+- Launch by voice trigger and a certain Location
 
 Use API
 -------------

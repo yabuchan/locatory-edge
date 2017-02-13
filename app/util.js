@@ -274,3 +274,30 @@ var convertTimeFormat = function (hours, minutes) {
     }
     return hours + ' ' + minutes + ' ' + ampm;
 };
+
+/**
+ * Convert time format to 12 hour clock and signify AM or PM.
+ * @param  {number} hours
+ * @param  {number} minutes
+ * @return {string} converted time
+ */
+var getCurrentContext = function() {
+    var def = $.Deferred();
+    var callbacks = {
+        onsuccess: function(result) {
+            console.log('getCurrentContext success.', result);
+            def.resolve(result);
+        },
+        onerror: function(error) {
+            console.log('getCurrentContext fail.' + error.message);
+            def.resolve(null);
+        }
+    };
+    var option = {
+        timeout: 30000,
+        enablehighaccuracy: true
+    };
+    var context = new da.ContextEngine();
+    context.getCurrentContext(callbacks, option);
+    return def.promise();
+};

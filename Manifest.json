@@ -1,16 +1,13 @@
 {
-  "package": "here-we-are",
+  "package": "com.sound.spice",
   "manifestVersion": 1,
   "version": 1,
   "versionName": "1.0.0",
-  "name": "Here We Are",
+  "name": "SoundSpice",
   "author": {
     "name": "Hitoshi Yabusaki",
-    "name": "Hiroshi Nakagoe",
+    "name": "Hiroshi Nakagoe"
   },
-  "description": "Say \"Here we are.\" You're getting to like this city more.",
-  "offlineEnabled": false,
-  "background": {
-    "pollingInterval": 300
-  }
+  "description": "SoundSpice makes your life more exciting by SOUNDS OF PAST BRILLIANT EVENTS that were held where you are.",
+  "offlineEnabled": false
 }

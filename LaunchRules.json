@@ -6,28 +6,30 @@
         "Here we are",
         "Here I am",
         "I'm comming",
-        "emosound",
-        "soundscape"
+        "soundspice"
+      ],
+      "phrase": [
+        ".*"
       ]
     }
   ],
   "rules": [
     {
-      "comment": "Geo NY: trigger when enter/exit to/from NY",
+      "comment": "Geo SOMA: trigger when enter/exit to/from SOMA",
       "argumentObject": {
         "cueVoice": "onlocation",
-        "cueVoiceArgs": ["at", "new york"],
+        "cueVoiceArgs": ["at", "San Francisco"],
         "args": {"type": "location"}
       },
       "trigger": {
         "geofence": [
           {
             "geo": {
-              "latitude": 40.758952,
-              "longitude": -73.984798,
-              "radius": 31560
+              "latitude": 37.786686,
+              "longitude": -122.396422,
+              "radius": 350
             },
-            "enterExit": ["ENTER", "EXIT"]
+            "enterExit": "ENTER"
           }
         ]
       },
@@ -47,28 +49,6 @@
       },
       "state": {
         "intervalFromPrevious": [10]
-      }
-    },
-    {
-      "comment": "Home or Office: trigger when to go out from or be in home",
-      "argumentObject": {
-        "cueVoice": "onlocation",
-        "cueVoiceArgs": ["at", "home"],
-        "args": {"type": "location"}
-      },
-      "trigger": {
-        "placeEvent": ["HOME_ENTER", "HOME_EXIT", "OFFICE_ENTER", "OFFICE_EXIT"]
-      }
-    },
-    {
-      "comment": "Commute: trigger while to go to/from office",
-      "argumentObject": {
-        "cueVoice": "oncommute",
-        "cueVoiceArgs": ["on the way to" "work"],
-        "args": {"type": "commute"}
-      },
-      "trigger": {
-        "transportationEvent": ["GOING_TO_WORK", "LEAVING_WORK"]
       }
     }
   ]
